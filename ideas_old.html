@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="About Plus Element Solutions — the firm's mandate, philosophy, and the principal's background in law, public service, and education."
+      content="Ideas & Publications — Plus Element Solutions. Non-conformist analysis on taxation, digital economy, regulatory design, and policy innovation."
     />
-    <title>About — Plus Element Solutions</title>
+    <title>Ideas & Publications — Plus Element Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -464,8 +464,7 @@
       .trust-bar__icon svg {
         width: 18px;
         height: 18px;
-        stroke: var(--gold);
-        fill: none;
+        fill: var(--gold);
       }
       .trust-bar__label {
         font-size: 0.7rem;
@@ -577,302 +576,240 @@
       }
     </style>
     <style>
-      /* ── MISSION ── */
-      .mission {
-        padding: 7rem 0;
+      /* ── IDEAS INDEX ── */
+      .ideas-index {
+        padding: 6rem 0;
         background: var(--white);
       }
-      .mission__layout {
+      .ideas-layout {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 6rem;
-        align-items: start;
-      }
-      .mission__body {
-        font-size: 1.05rem;
-        color: var(--text-body);
-        line-height: 1.85;
-      }
-      .mission__body p + p {
-        margin-top: 1.25rem;
-      }
-      .mission__philosophy {
-        margin-top: 3rem;
-        padding: 2.5rem 2.5rem 2.5rem 2rem;
-        border-left: 4px solid var(--gold);
-        background: var(--offwhite);
-      }
-      .mission__philosophy blockquote {
-        font-family: var(--serif);
-        font-size: 1.5rem;
-        font-style: italic;
-        color: var(--navy);
-        line-height: 1.5;
-        font-weight: 600;
-      }
-      .mission__philosophy cite {
-        display: block;
-        margin-top: 1rem;
-        font-family: var(--sans);
-        font-size: 0.75rem;
-        font-style: normal;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--slate);
-      }
-      .mission__visual {
-        background: var(--navy);
-        padding: 3rem;
-        position: relative;
-      }
-      .mission__visual::before {
-        content: "";
-        position: absolute;
-        top: -12px;
-        left: -12px;
-        right: 12px;
-        bottom: 12px;
-        border: 2px solid var(--gold);
-        z-index: 0;
-      }
-      .mission__visual__inner {
-        position: relative;
-        z-index: 1;
-      }
-      .mission__stat {
-        padding: 1.75rem 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      .mission__stat:first-child {
-        padding-top: 0;
-      }
-      .mission__stat:last-child {
-        border-bottom: none;
-        padding-bottom: 0;
-      }
-      .mission__stat__num {
-        font-family: var(--serif);
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: var(--gold);
-        line-height: 1;
-      }
-      .mission__stat__label {
-        font-size: 0.8rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.5);
-        margin-top: 0.4rem;
-      }
-      .mission__stat__body {
-        font-size: 0.875rem;
-        color: rgba(255, 255, 255, 0.4);
-        margin-top: 0.5rem;
-        line-height: 1.6;
-      }
-
-      /* ── PRINCIPAL ── */
-      .principal {
-        padding: 7rem 0;
-        background: var(--offwhite);
-        border-top: 1px solid var(--rule);
-      }
-      .principal__layout {
-        display: grid;
-        grid-template-columns: 340px 1fr;
+        grid-template-columns: 1fr 280px;
         gap: 5rem;
         align-items: start;
       }
-      .principal__card {
+
+      /* Featured article */
+      .featured-article {
+        border: 2px solid var(--navy);
+        padding: 3rem;
+        margin-bottom: 4rem;
+        position: relative;
+      }
+      .featured-article::before {
+        content: "Featured Essay";
+        position: absolute;
+        top: -11px;
+        left: 2rem;
         background: var(--white);
-        border: 1px solid var(--rule);
-        padding: 2.5rem;
+        padding: 0 0.75rem;
+        font-size: 0.65rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+      .featured-article__tag {
+        display: inline-block;
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gold);
+        border: 1px solid rgba(192, 154, 80, 0.35);
+        padding: 0.25rem 0.7rem;
+        border-radius: 2px;
+        margin-bottom: 1.25rem;
+      }
+      .featured-article__title {
+        font-family: var(--serif);
+        font-size: clamp(1.4rem, 3vw, 2rem);
+        font-weight: 700;
+        color: var(--navy);
+        line-height: 1.3;
+        margin-bottom: 0.75rem;
+      }
+      .featured-article__excerpt {
+        font-size: 0.975rem;
+        color: var(--text-muted);
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+        max-width: 640px;
+      }
+      .article-meta {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+      }
+      .article-meta span {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+
+      /* Article list */
+      .article-list {
+        list-style: none;
+      }
+      .article-item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 2rem;
+        align-items: start;
+        padding: 2rem 0;
+        border-top: 1px solid var(--rule);
+        transition: background 0.15s;
+      }
+      .article-item a {
+        display: contents;
+      }
+      .article-item:hover .article-item__title {
+        color: var(--gold);
+      }
+      .article-item__date-col {
+        width: 70px;
+        text-align: right;
+        padding-top: 0.25rem;
+      }
+      .article-item__month {
+        font-size: 0.65rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--slate-lt);
+      }
+      .article-item__year {
+        font-family: var(--serif);
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--rule);
+        line-height: 1;
+        margin-top: 0.15rem;
+      }
+      .article-item__tag {
+        display: inline-block;
+        font-size: 0.6rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--slate);
+        margin-bottom: 0.4rem;
+      }
+      .article-item__title {
+        font-family: var(--serif);
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--navy);
+        line-height: 1.3;
+        margin-bottom: 0.4rem;
+        transition: color 0.15s;
+      }
+      .article-item__excerpt {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        line-height: 1.7;
+        margin-bottom: 0.6rem;
+      }
+      .article-item__readtime {
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--slate-lt);
+      }
+
+      /* Sidebar */
+      .ideas-sidebar {
         position: sticky;
         top: 100px;
       }
-      .principal__avatar {
-        width: 100%;
-        aspect-ratio: 1;
-        background: var(--navy-mid);
-        display: grid;
-        place-items: center;
-        margin-bottom: 2rem;
-        position: relative;
-        overflow: hidden;
-      }
-      .principal__avatar svg {
-        width: 80px;
-        height: 80px;
-        fill: rgba(255, 255, 255, 0.15);
-      }
-      .principal__avatar__badge {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: var(--gold);
-        padding: 0.5rem 1rem;
-        font-size: 0.65rem;
-        font-weight: 600;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--navy-deep);
-        text-align: center;
-      }
-      .principal__name {
-        font-family: var(--serif);
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: var(--navy);
-        margin-bottom: 0.25rem;
-      }
-      .principal__title {
-        font-size: 0.8rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--slate);
+      .sidebar-section {
+        padding: 1.75rem;
+        background: var(--offwhite);
+        border: 1px solid var(--rule);
         margin-bottom: 1.5rem;
       }
-      .principal__credentials {
+      .sidebar-section h3 {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--navy);
+        margin-bottom: 1rem;
+      }
+      .category-list {
         list-style: none;
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 0.5rem;
       }
-      .principal__credentials li {
+      .category-list li a {
         display: flex;
-        align-items: flex-start;
-        gap: 0.75rem;
+        justify-content: space-between;
+        align-items: center;
         font-size: 0.875rem;
         color: var(--text-muted);
-        line-height: 1.5;
+        padding: 0.35rem 0;
+        border-bottom: 1px solid var(--rule);
+        transition: color 0.15s;
       }
-      .principal__credentials li::before {
-        content: "";
-        display: block;
-        flex-shrink: 0;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: var(--gold);
-        margin-top: 0.45rem;
+      .category-list li a:hover {
+        color: var(--navy);
       }
-
-      .principal__bio {
-        font-size: 1.05rem;
-        color: var(--text-body);
-        line-height: 1.9;
+      .category-list li a span {
+        font-size: 0.7rem;
+        background: var(--rule);
+        color: var(--slate);
+        padding: 0.1rem 0.5rem;
+        border-radius: 10px;
       }
-      .principal__bio p + p {
-        margin-top: 1.5rem;
+      .subscribe-box {
+        background: var(--navy);
+        padding: 1.75rem;
+        margin-bottom: 1.5rem;
       }
-      .principal__bio h3 {
+      .subscribe-box h3 {
         font-family: var(--serif);
-        font-size: 1.25rem;
+        font-size: 1rem;
         font-weight: 700;
-        color: var(--navy);
-        margin-top: 2.5rem;
-        margin-bottom: 0.75rem;
-      }
-      .principal__bio blockquote {
-        margin: 2rem 0;
-        padding: 1.5rem 2rem;
-        border-left: 3px solid var(--gold);
-        background: var(--white);
-        font-family: var(--serif);
-        font-style: italic;
-        font-size: 1.1rem;
-        color: var(--navy);
-        line-height: 1.6;
-      }
-      .nonconformist-tag {
-        display: inline-block;
-        background: var(--navy);
-        color: var(--gold);
-        font-size: 0.65rem;
-        font-weight: 600;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        padding: 0.3rem 0.75rem;
-        border-radius: 2px;
-        margin-bottom: 2rem;
-      }
-
-      /* ── VALUES ── */
-      .values {
-        padding: 7rem 0;
-        background: var(--navy);
-        position: relative;
-        overflow: hidden;
-      }
-      .values__bg {
-        position: absolute;
-        inset: 0;
-        background-image:
-          linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-        background-size: 48px 48px;
-      }
-      .values__inner {
-        position: relative;
-        z-index: 2;
-      }
-      .values .section-title {
         color: var(--white);
+        margin-bottom: 0.5rem;
       }
-      .values .section-subtitle {
+      .subscribe-box p {
+        font-size: 0.8rem;
         color: rgba(255, 255, 255, 0.5);
-      }
-      .values-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5px;
-        background: rgba(255, 255, 255, 0.08);
-      }
-      .value-card {
-        background: var(--navy-deep);
-        padding: 2.5rem;
-      }
-      .value-card__num {
-        font-family: var(--serif);
-        font-size: 3rem;
-        font-weight: 700;
-        color: rgba(192, 154, 80, 0.2);
-        line-height: 1;
+        line-height: 1.6;
         margin-bottom: 1rem;
       }
-      .value-card__title {
-        font-family: var(--serif);
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: var(--white);
-        margin-bottom: 0.6rem;
-      }
-      .value-card__body {
-        font-size: 0.875rem;
-        color: rgba(255, 255, 255, 0.45);
-        line-height: 1.75;
+      .subscribe-note {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.35);
+        margin-top: 0.6rem;
+        line-height: 1.5;
       }
 
-      @media (max-width: 960px) {
-        .mission__layout,
-        .principal__layout {
+      @media (max-width: 900px) {
+        .ideas-layout {
           grid-template-columns: 1fr;
-          gap: 3rem;
         }
-        .principal__card {
+        .ideas-sidebar {
           position: static;
         }
-        .values-grid {
-          grid-template-columns: 1fr 1fr;
-        }
       }
-      @media (max-width: 640px) {
-        .values-grid {
-          grid-template-columns: 1fr;
+      @media (max-width: 600px) {
+        .featured-article {
+          padding: 2rem;
         }
-        .mission__visual::before {
-          display: none;
+        .article-item {
+          grid-template-columns: 1fr;
+          gap: 0.25rem;
+        }
+        .article-item__date-col {
+          text-align: left;
         }
       }
     </style>
@@ -893,7 +830,9 @@
                 width="70px"
               />
             </div>
-            <div class="nav-logo__text">Plus Element Solutions</div>
+            <div class="nav-logo__text">
+              Plus Element Solutions<span>Policy · Prosperity · Progress</span>
+            </div>
           </a>
           <ul class="nav-links" role="list">
             <li><a href="index.html">Home</a></li>
@@ -928,318 +867,266 @@
         <div class="page-hero__rule" aria-hidden="true"></div>
         <div class="container page-hero__inner">
           <div class="page-hero__eyebrow" aria-hidden="true">
-            About the Firm
+            The Intellectual Engine
           </div>
           <h1 class="page-hero__title" id="page-title">
-            Substance First.<br /><em>Always.</em>
+            Ideas That Earn<br /><em>Their Place</em>
           </h1>
           <p class="page-hero__sub">
-            A legally established Nigerian advisory entity whose credibility is
-            built on professional pedigree, intellectual honesty, and consistent
-            delivery — not packaging.
+            Non-conformist essays on fiscal architecture, digital sovereignty,
+            regulatory design, and the governing assumptions that deserve
+            serious challenge.
           </p>
         </div>
       </section>
 
-      <section class="mission" aria-labelledby="mission-title">
+      <section class="ideas-index" aria-labelledby="publications-title">
         <div class="container">
-          <div class="mission__layout">
+          <h2 class="sr-only" id="publications-title">All Publications</h2>
+          <div class="ideas-layout">
             <div>
-              <div class="section-label" aria-hidden="true">
-                Mission & Mandate
-              </div>
-              <h2 class="section-title reveal" id="mission-title">
-                What We Are Here to Do
-              </h2>
-              <div class="mission__body reveal">
-                <p>
-                  Plus Element Solutions exists to close the gap between policy
-                  formulation and policy impact — between what governments and
-                  institutions announce and what their citizens and stakeholders
-                  actually experience.
-                </p>
-                <p>
-                  We provide the intellectual frameworks, human capital
-                  development, and regulatory thinking that converts
-                  well-intentioned mandates into measurable outcomes. Our work
-                  is primarily delivered through offline engagements: training
-                  programmes, advisory sessions, and policy workshops conducted
-                  in person, with full financial transparency.
-                </p>
-                <p>
-                  Our digital presence is not our product. It is our proof —
-                  proof that the firm is real, verifiable, and serious about its
-                  mandate. What you read here is the framework; the delivery
-                  happens in person.
-                </p>
-              </div>
-              <div class="mission__philosophy reveal">
-                <blockquote>
-                  "Baking the cake well — not merely wrapping it well."
-                </blockquote>
-                <cite>— Core Operating Philosophy, Plus Element Solutions</cite>
-              </div>
-            </div>
-
-            <div class="mission__visual reveal">
-              <div
-                class="mission__visual__inner"
-                role="list"
-                aria-label="Firm at a glance"
+              <!-- Featured -->
+              <article
+                class="featured-article reveal"
+                aria-label="Featured essay"
               >
-                <div class="mission__stat" role="listitem">
-                  <div class="mission__stat__num">LLB</div>
-                  <div class="mission__stat__label">Legal Foundation</div>
-                  <div class="mission__stat__body">
-                    Principal holds a Bachelor of Laws degree, grounding all
-                    advisory in a rigorous legal and regulatory framework.
-                  </div>
+                <div class="featured-article__tag">Fiscal Policy</div>
+                <div class="article-meta">
+                  <span
+                    ><svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      aria-hidden="true"
+                    >
+                      <rect x="3" y="4" width="18" height="18" rx="2" />
+                      <line x1="16" y1="2" x2="16" y2="6" />
+                      <line x1="8" y1="2" x2="8" y2="6" />
+                      <line x1="3" y1="10" x2="21" y2="10" /></svg
+                    >February 2026</span
+                  >
+                  <span>8 min read</span>
                 </div>
-                <div class="mission__stat" role="listitem">
-                  <div class="mission__stat__num">Pub.</div>
-                  <div class="mission__stat__label">Public Sector Pedigree</div>
-                  <div class="mission__stat__body">
-                    Extensive experience as a public servant in governance,
-                    policy execution, and institutional administration.
-                  </div>
-                </div>
-                <div class="mission__stat" role="listitem">
-                  <div class="mission__stat__num">Edu.</div>
-                  <div class="mission__stat__label">Educator Background</div>
-                  <div class="mission__stat__body">
-                    Proven capacity to transfer complex knowledge — a skill that
-                    defines every training and coaching engagement.
-                  </div>
-                </div>
-                <div class="mission__stat" role="listitem">
-                  <div class="mission__stat__num">100%</div>
-                  <div class="mission__stat__label">Offline Transactions</div>
-                  <div class="mission__stat__body">
-                    All financial transactions for services are conducted
-                    strictly offline, eliminating digital fraud risk for every
-                    client.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="principal" aria-labelledby="principal-title">
-        <div class="container">
-          <div class="section-label" aria-hidden="true">The Principal</div>
-          <div class="principal__layout">
-            <aside
-              class="principal__card reveal"
-              aria-label="Principal profile card"
-            >
-              <div class="principal__avatar" aria-hidden="true">
-                <img
-                  src="./Gemini_Generated_Image_whmwwcwhmwwcwhmw.png"
-                  alt=""
-                  height="auto"
-                />
-                <div class="principal__avatar__badge">
-                  Co-Founders & Principal Advisers
-                </div>
-              </div>
-              <h2 class="principal__name" id="principal-title">
-                Inye Kemabonta & Ibiwari Uloma Kemabonta
-              </h2>
-              <p class="principal__title">
-                Technology Attorney & Consultant | Leadership Development
-                Consultant
-              </p>
-              <ul class="principal__credentials" aria-label="Credentials">
-                <li>Senior member, Nigerian tech innovation ecosystem</li>
-                <li>
-                  Contributed, among other Stakeholders, to the establishment of
-                  NITDA, NIRA, and the Local Content Program in ICT
-                </li>
-                <li>World Bank & European Union Consultant</li>
-                <li>Leadership Development & Human Capital Coach</li>
-              </ul>
-            </aside>
-
-            <div class="principal__bio reveal">
-              <div class="nonconformist-tag" aria-label="Category">
-                Digital Economy & Leadership Experts
-              </div>
-              <p>
-                <strong>Inye Kemabonta</strong> is a technology attorney and
-                consultant specializing in the digital economy for
-                international, national, and private organizations. He is a
-                senior member of the Nigerian tech innovation ecosystem and
-                contributed, among other Stakeholders, to the establishment of
-                agencies such as NITDA, NIRA, and the Local Content Program in
-                ICT.
-              </p>
-
-              <h3>Key Consultancies & Global Roles</h3>
-              <p>
-                Inye has served as a <strong>World Bank Consultant</strong> for
-                the 2019 Digital Economy Diagnostics for Africa and lead
-                consultant for the Nigeria GovTech Community Initiative. As a
-                Key Expert for the <strong>European Union</strong>, he supported
-                broadband infrastructure expansion in Nigeria. Currently, he
-                consults for the
-                <strong>German GIZ & Impact Investment Foundation</strong> on
-                Impact Investing, developing a National Impact Investing Policy
-                Framework. Additionally, he serves as an Expert Trainer on
-                Internet Governance for the
-                <strong>African Union Commission</strong> and represents
-                technology-enabled businesses in Africa as the Nigerian
-                coordinator for <strong>AfICTA</strong>.
-              </p>
-
-              <h3>Regulatory & Policy Leadership</h3>
-              <p>
-                His policy leadership includes drafting a regulatory framework
-                for Cyber Insurance in Nigeria for NITDA and NAICOM, as well as
-                helping draft major legislation such as the E-government and
-                Digital Economy Bill, CyberCrime Bill, and the NITDA Bill. He
-                was the Pioneer National Coordinator of the Office for Nigerian
-                Content Development (ONC) and is the current chair of the Policy
-                and Regulation Committee for the NCDMB ICT Sector Working Group.
-                Furthermore, he formerly headed the IT Standards and Regulation
-                Department at NITDA.
-              </p>
-
-              <h3>Advocacy & Education</h3>
-              <p>
-                Inye passionately advocates for creative regulatory strategies
-                to expand broadband access and improve digital, financial, and
-                internet literacy. He champions local content implementation to
-                create jobs and strengthen the naira. He also consults for state
-                ICT agencies on using stakeholder-driven regulations to catalyze
-                growth and serves as a Director in the Financial Inclusion
-                Centers Professionals Network PLC.
-              </p>
-
-              <hr
-                style="
-                  margin: 3rem 0;
-                  border: none;
-                  border-top: 1px solid var(--rule);
-                "
-                aria-hidden="true"
-              />
-
-              <p>
-                <strong>Kemabonta, Ibiwari Uloma</strong> is a John Maxwell
-                certified Leadership Development Consultant and Human Capital
-                Development Coach and an IATA certified travel and tours
-                professional and consultant.
-              </p>
-
-              <p>
-                Apart from managing her tour company, she runs aTIP (Africa
-                Travel Information Platform) a platform purely dedicated to the
-                development and promotion of sustainable tourism in Africa.
-              </p>
-
-              <p>
-                She is currently the national chairperson for the NANTA Capacity
-                Development and Accreditation Committee and has served the
-                organization as the Deputy Vice President in Abuja.
-              </p>
-
-              <p style="margin-top: 2rem">
-                <a href="contact.html" class="btn btn-primary"
-                  >Engage the Principal</a
+                <h2 class="featured-article__title">
+                  <a href="ideas/challenging-necessity-of-tax.html"
+                    >Challenging the Necessity of Tax: Toward a Revenue
+                    Architecture That Rewards Prosperity</a
+                  >
+                </h2>
+                <p class="featured-article__excerpt">
+                  The conventional wisdom that taxation is the inevitable price
+                  of civilisation deserves scrutiny. What if regulatory design,
+                  rather than fiscal extraction, could finance public goods
+                  while simultaneously expanding the productive base of an
+                  economy? This essay examines the structural assumptions
+                  beneath modern tax systems and asks whether they serve the
+                  ends we claim.
+                </p>
+                <a
+                  href="ideas/challenging-necessity-of-tax.html"
+                  class="link-arrow"
+                  >Read the Full Essay</a
                 >
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+              </article>
 
-      <section class="values" aria-labelledby="values-title">
-        <div class="values__bg" aria-hidden="true"></div>
-        <div class="container values__inner">
-          <div class="section-label" aria-hidden="true">What We Stand On</div>
-          <h2 class="section-title reveal" id="values-title">
-            Six Principles That<br />Guide Every Engagement
-          </h2>
-          <p class="section-subtitle reveal" style="margin-bottom: 3rem">
-            Not aspirational slogans — operational commitments that clients can
-            hold us to.
-          </p>
-          <div class="values-grid" role="list">
-            <div class="value-card reveal" role="listitem">
-              <div class="value-card__num" aria-hidden="true">01</div>
-              <h3 class="value-card__title">Legal Clarity</h3>
-              <p class="value-card__body">
-                Every framework we provide is grounded in a legally coherent
-                understanding of the regulatory environment in which our clients
-                operate.
-              </p>
+              <!-- Article list -->
+              <ul class="article-list" aria-label="All publications">
+                <li class="article-item reveal">
+                  <div class="article-item__date-col" aria-hidden="true">
+                    <div class="article-item__month">Jan</div>
+                    <div class="article-item__year">2026</div>
+                  </div>
+                  <div>
+                    <div class="article-item__tag">Digital Economy</div>
+                    <h3 class="article-item__title">
+                      <a href="ideas/indigenous-content-value.html"
+                        >The Undervalued Asset: Why African Digital Content Is
+                        Worth More Than Its Market Price</a
+                      >
+                    </h3>
+                    <p class="article-item__excerpt">
+                      African content drives engagement on global platforms but
+                      captures a fraction of the value it creates. This is not a
+                      market failure — it is a regulatory failure. Here is how
+                      to correct it.
+                    </p>
+                    <div class="article-item__readtime">6 min read</div>
+                  </div>
+                </li>
+                <li class="article-item reveal" style="transition-delay: 0.05s">
+                  <div class="article-item__date-col" aria-hidden="true">
+                    <div class="article-item__month">Dec</div>
+                    <div class="article-item__year">2025</div>
+                  </div>
+                  <div>
+                    <div class="article-item__tag">Regulatory Design</div>
+                    <h3 class="article-item__title">
+                      <a href="ideas/regulation-as-industry-creation.html"
+                        >Regulation as a Job-Creation Instrument: The Untapped
+                        Economic Logic</a
+                      >
+                    </h3>
+                    <p class="article-item__excerpt">
+                      Governments reach for expenditure, subsidies, and tax
+                      incentives when they want to create jobs. But the most
+                      durable employment is created through regulatory
+                      architecture that makes new professions necessary and
+                      economically viable.
+                    </p>
+                    <div class="article-item__readtime">10 min read</div>
+                  </div>
+                </li>
+                <li class="article-item reveal" style="transition-delay: 0.1s">
+                  <div class="article-item__date-col" aria-hidden="true">
+                    <div class="article-item__month">Nov</div>
+                    <div class="article-item__year">2025</div>
+                  </div>
+                  <div>
+                    <div class="article-item__tag">Capacity Building</div>
+                    <h3 class="article-item__title">
+                      <a href="ideas/writing-as-governance.html"
+                        >Writing as Governance: Why the Quality of Public
+                        Documents Predicts the Quality of Public Outcomes</a
+                      >
+                    </h3>
+                    <p class="article-item__excerpt">
+                      The standard of a government's reports, minutes, and
+                      policy papers is not merely a stylistic concern. It is a
+                      governance indicator — a signal of whether ideas can be
+                      transmitted with sufficient clarity to actually drive
+                      action.
+                    </p>
+                    <div class="article-item__readtime">7 min read</div>
+                  </div>
+                </li>
+                <li class="article-item reveal" style="transition-delay: 0.15s">
+                  <div class="article-item__date-col" aria-hidden="true">
+                    <div class="article-item__month">Oct</div>
+                    <div class="article-item__year">2025</div>
+                  </div>
+                  <div>
+                    <div class="article-item__tag">Fiscal Policy</div>
+                    <h3 class="article-item__title">
+                      <a href="ideas/informal-economy-formalisation.html"
+                        >The Formalisation Question: Can Regulatory Design Bring
+                        Nigeria's Informal Economy In from the Cold?</a
+                      >
+                    </h3>
+                    <p class="article-item__excerpt">
+                      Nigeria's informal economy is not a problem to be solved
+                      by enforcement. It is a product of a regulatory
+                      environment that makes formality more costly than
+                      informality. Change the environment; change the
+                      calculation.
+                    </p>
+                    <div class="article-item__readtime">9 min read</div>
+                  </div>
+                </li>
+                <li class="article-item reveal" style="transition-delay: 0.2s">
+                  <div class="article-item__date-col" aria-hidden="true">
+                    <div class="article-item__month">Sep</div>
+                    <div class="article-item__year">2025</div>
+                  </div>
+                  <div>
+                    <div class="article-item__tag">Public Administration</div>
+                    <h3 class="article-item__title">
+                      <a href="ideas/public-speaking-power.html"
+                        >The Power That Professionals Leave on the Table: On
+                        Public Speaking and Institutional Influence</a
+                      >
+                    </h3>
+                    <p class="article-item__excerpt">
+                      The most capable people in most organisations are rarely
+                      the most effective advocates for their own ideas. This is
+                      a trainable gap — and closing it changes everything about
+                      how institutions make decisions.
+                    </p>
+                    <div class="article-item__readtime">5 min read</div>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <div
-              class="value-card reveal"
-              style="transition-delay: 0.06s"
-              role="listitem"
-            >
-              <div class="value-card__num" aria-hidden="true">02</div>
-              <h3 class="value-card__title">Institutional Honesty</h3>
-              <p class="value-card__body">
-                We tell clients what their organisations need to hear, not what
-                confirms the decisions they have already made.
-              </p>
-            </div>
-            <div
-              class="value-card reveal"
-              style="transition-delay: 0.12s"
-              role="listitem"
-            >
-              <div class="value-card__num" aria-hidden="true">03</div>
-              <h3 class="value-card__title">Knowledge Transfer</h3>
-              <p class="value-card__body">
-                Advisory that does not build the client's own capacity is
-                dependency, not development. We measure success by what clients
-                can do without us.
-              </p>
-            </div>
-            <div
-              class="value-card reveal"
-              style="transition-delay: 0.18s"
-              role="listitem"
-            >
-              <div class="value-card__num" aria-hidden="true">04</div>
-              <h3 class="value-card__title">Financial Transparency</h3>
-              <p class="value-card__body">
-                All engagements are priced, documented, and transacted offline.
-                No ambiguity. No digital payment channels that expose our
-                clients to fraud.
-              </p>
-            </div>
-            <div
-              class="value-card reveal"
-              style="transition-delay: 0.24s"
-              role="listitem"
-            >
-              <div class="value-card__num" aria-hidden="true">05</div>
-              <h3 class="value-card__title">Intellectual Courage</h3>
-              <p class="value-card__body">
-                We publish ideas that challenge mainstream positions — not to
-                attract attention but because we believe the questions deserve
-                rigorous public examination.
-              </p>
-            </div>
-            <div
-              class="value-card reveal"
-              style="transition-delay: 0.3s"
-              role="listitem"
-            >
-              <div class="value-card__num" aria-hidden="true">06</div>
-              <h3 class="value-card__title">Verifiable Identity</h3>
-              <p class="value-card__body">
-                Our phone numbers, email addresses, physical location, and
-                professional networks are all publicly listed. We have nothing
-                to hide and everything to stand behind.
-              </p>
-            </div>
+
+            <!-- Sidebar -->
+            <aside class="ideas-sidebar" aria-label="Ideas sidebar">
+              <div class="sidebar-section">
+                <h3>Topics</h3>
+                <ul class="category-list" role="list">
+                  <li>
+                    <a
+                      href="#"
+                      aria-label="Filter by Fiscal Policy (3 articles)"
+                      >Fiscal Policy <span>3</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      aria-label="Filter by Digital Economy (2 articles)"
+                      >Digital Economy <span>2</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      aria-label="Filter by Regulatory Design (2 articles)"
+                      >Regulatory Design <span>2</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      aria-label="Filter by Capacity Building (1 article)"
+                      >Capacity Building <span>1</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      aria-label="Filter by Public Administration (1 article)"
+                      >Public Administration <span>1</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="subscribe-box">
+                <h3>Stay Informed</h3>
+                <p>
+                  New essays are published periodically. Contact us directly to
+                  be notified of new publications.
+                </p>
+                <a
+                  href="contact.html"
+                  class="btn btn-primary"
+                  style="width: 100%; justify-content: center"
+                  >Get in Touch</a
+                >
+                <p class="subscribe-note">
+                  We do not operate a mailing list. All communication is direct
+                  and personal.
+                </p>
+              </div>
+
+              <div class="sidebar-section">
+                <h3>About These Ideas</h3>
+                <p
+                  style="
+                    font-size: 0.8rem;
+                    color: var(--text-muted);
+                    line-height: 1.7;
+                  "
+                >
+                  These essays represent the independent intellectual positions
+                  of the firm's principal. They are offered as contributions to
+                  public discourse — not as settled conclusions, but as rigorous
+                  questions addressed to governing assumptions.
+                </p>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
@@ -1248,7 +1135,11 @@
         <div class="container trust-bar__inner">
           <div class="trust-bar__item">
             <div class="trust-bar__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"
+                />
+              </svg>
             </div>
             <div>
               <div class="trust-bar__label">Phone / WhatsApp</div>
@@ -1259,7 +1150,11 @@
           </div>
           <div class="trust-bar__item">
             <div class="trust-bar__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
             </div>
             <div>
               <div class="trust-bar__label">Email</div>
@@ -1272,7 +1167,11 @@
           </div>
           <div class="trust-bar__item">
             <div class="trust-bar__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                />
+              </svg>
             </div>
             <div>
               <div class="trust-bar__label">Location</div>
@@ -1281,7 +1180,11 @@
           </div>
           <div class="trust-bar__item">
             <div class="trust-bar__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"
+                />
+              </svg>
             </div>
             <div>
               <div class="trust-bar__label">LinkedIn</div>
@@ -1313,7 +1216,7 @@
               </div>
               <div class="nav-logo__text">
                 Plus Element Solutions<span
-                  >The Continuous Pursuit of Excellence</span
+                  >Policy · Prosperity · Progress</span
                 >
               </div></a
             >
