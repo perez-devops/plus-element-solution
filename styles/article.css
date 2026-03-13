@@ -1,0 +1,212 @@
+/* ─── ARTICLE LAYOUT ─────────────────────────────────────────── */
+.article-container {
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* ─── ARTICLE HERO ────────────────────────────────────────────── */
+.article-hero {
+  padding-top: 180px;
+  padding-bottom: 6rem;
+  background: var(--navy-deep);
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+  text-align: center;
+}
+.article-hero__bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 90% 80%,
+    rgba(22, 50, 81, 0.8) 0%,
+    transparent 60%
+  );
+  z-index: 1;
+}
+.article-hero__inner {
+  position: relative;
+  z-index: 2;
+}
+.article-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.75rem;
+}
+.article-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
+  max-width: 900px;
+  margin-inline: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.article-meta {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ─── ARTICLE CONTENT ─────────────────────────────────────────── */
+.article-body {
+  padding: 6rem 0;
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--text-body);
+  line-height: 1.9;
+}
+.article-body p {
+  margin-bottom: 2.25rem;
+}
+.article-body h2 {
+  font-family: var(--serif);
+  font-size: 1.85rem;
+  color: var(--navy);
+  margin: 4rem 0 1.5rem;
+  line-height: 1.3;
+}
+.article-body h3 {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  color: var(--navy-mid);
+  margin: 3rem 0 1.25rem;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.article-body ul, 
+.article-body ol {
+  margin-bottom: 2.5rem;
+  padding-left: 1.5rem;
+}
+.article-body li {
+  margin-bottom: 1rem;
+}
+.article-body li b,
+.article-body li strong {
+  color: var(--navy);
+}
+.article-body blockquote {
+  margin: 4.5rem 0;
+  padding: 2.5rem;
+  background: var(--offwhite);
+  border-left: 5px solid var(--gold);
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--navy-mid);
+  line-height: 1.6;
+  position: relative;
+}
+.article-body b,
+.article-body strong {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+/* ─── STRATEGIC OUTLOOK ────────────────────────────────────────── */
+.strategic-outlook {
+  margin: 5rem 0 2rem;
+  padding: 4rem;
+  background: var(--navy-deep);
+  color: rgba(255, 255, 255, 0.85);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+.strategic-outlook h2 {
+  color: var(--gold) !important;
+  margin-top: 0 !important;
+}
+.strategic-outlook p {
+  color: rgba(255, 255, 255, 0.7);
+}
+.strategic-outlook strong {
+  color: var(--white) !important;
+}
+
+/* ─── SECTION ACCENT ─────────────────────────────────────────── */
+.section-accent {
+  margin: 3.5rem 0;
+  padding: 3rem;
+  background: var(--offwhite);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+}
+.section-accent h3 {
+  margin-top: 0 !important;
+}
+.section-accent ul:last-child,
+.section-accent ol:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── BACK LINK ────────────────────────────────────────────────── */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  margin-bottom: 2.5rem;
+  transition: transform 0.2s;
+}
+.back-link:hover {
+  transform: translateX(-5px);
+}
+.back-link::before {
+  content: "←";
+  font-size: 1.1rem;
+}
+
+@media (max-width: 960px) {
+  .article-hero {
+    padding-top: 140px;
+  }
+  .article-title {
+    font-size: 2rem;
+  }
+  .strategic-outlook {
+    padding: 2.5rem;
+  }
+}
+@media (max-width: 640px) {
+  .article-hero {
+    padding-top: 120px;
+    padding-bottom: 4rem;
+  }
+  .article-title {
+    font-size: 1.75rem;
+  }
+  .article-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .article-body {
+    font-size: 1.1rem;
+    padding: 4rem 0;
+  }
+  .strategic-outlook {
+    padding: 2rem;
+    margin-inline: calc(var(--gutter) * -1);
+    border-radius: 0;
+  }
+  .section-accent {
+    padding: 2rem;
+    margin-inline: calc(var(--gutter) * -1);
+    border-radius: 0;
+    border-inline: none;
+  }
+}

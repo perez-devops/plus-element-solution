@@ -52,12 +52,25 @@
     revealEls.forEach(el => observer.observe(el));
   }
 
-  // ── Mark active nav link based on current page filename
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  // ── Mark active nav link based on current path
+  const currentUrl = window.location.href.split(/[?#]/)[0].toLowerCase();
+  const normalize = url => url.replace(/\/index\.html$/, '/').replace(/\/$/, '');
+  const normCurrent = normalize(currentUrl);
+
   document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+    link.removeAttribute('aria-current');
+    const linkUrl = link.href.split(/[?#]/)[0].toLowerCase();
+    const normLink = normalize(linkUrl);
+
+    if (normCurrent === normLink) {
       link.setAttribute('aria-current', 'page');
+    } 
+    // Section match (for About, Services, Ideas)
+    // Exclude Home link or any link that resolves to the origin/root from section-matching subpages
+    else if (link.textContent.trim().toLowerCase() !== 'home') {
+      if (normCurrent.startsWith(normLink + '/')) {
+        link.setAttribute('aria-current', 'page');
+      }
     }
   });
 
